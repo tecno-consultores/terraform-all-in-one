@@ -13,6 +13,8 @@ docker buildx create --name container-builder --driver docker-container --bootst
 docker buildx build --platform linux/arm64,linux/amd64 --push -t sinfallas/terraform-all-in-one:latest --builder=container-builder -f Dockerfile .
 docker buildx rm container-builder
 docker system prune -af
+docker builder prune -af
+docker buildx prune -af
 
 echo "finalizado..."
 exit 0
