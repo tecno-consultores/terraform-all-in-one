@@ -1,5 +1,5 @@
 # terraform-all-in-one
-Docker image with Terraform and other complementary tools
+Docker image with Terraform, awscli, google-cloud-cli, semaphoreUI and other complementary tools.
 
 List of installed packages:
 * jq
