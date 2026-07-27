@@ -17,3 +17,7 @@ RUN ARCH=$(dpkg --print-architecture) && LATEST_VERSION=$(curl -s https://api.gi
 # misc
 COPY configuraraws /usr/bin/configuraraws
 RUN chmod 777 /usr/bin/configuraraws
+RUN mkdir -p /etc/semaphore
+COPY config.json /etc/semaphore/config.json
+EXPOSE 3000
+ENTRYPOINT ["semaphore", "server", "--config", "/etc/semaphore/config.json"]

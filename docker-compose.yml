@@ -9,6 +9,8 @@ services:
       - AWS_ACCESS_KEY_ID=example # change me
       - AWS_SECRET_ACCESS_KEY=example # change me
       - AWS_DEFAULT_REGION=example # change me
+    volumes:
+      - ./config.json:/etc/semaphore/config.json
     logging:
       driver: "json-file"
       options:
