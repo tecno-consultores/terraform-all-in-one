@@ -1,0 +1,17 @@
+services:
+  terraform:
+    image: sinfallas/terraform-all-in-one:latest
+    hostname: terraform
+    container_name: terraform
+    pull_policy: always
+    restart: always
+    environment:
+      - AWS_ACCESS_KEY_ID=example # change me
+      - AWS_SECRET_ACCESS_KEY=example # change me
+      - AWS_DEFAULT_REGION=example # change me
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
+        max-file: "1"
+
