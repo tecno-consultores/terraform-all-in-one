@@ -3,7 +3,7 @@ LABEL maintainer="Jesus Palencia sinfallas@gmail.com"
 LABEL build_date="2026-07-27"
 ENV DEBIAN_FRONTEND=noninteractive
 WORKDIR /app
-RUN apt update -qq && apt -y dist-upgrade && apt -y install --no-install-recommends --no-install-suggests ansible jq ca-certificates gnupg software-properties-common tzdata git tar zip unzip s3fs ssh sshpass sshfs samba-client swaks nano wget curl rsync expect iputils-ping && apt clean && apt -y autoremove && rm -rf /var/lib/{apt,dpkg,cache,log} && rm -rf /var/cache/* && rm -rf /var/log/apt/* && rm -rf /tmp/*
+RUN apt update -qq && apt -y dist-upgrade && apt -y install --no-install-recommends --no-install-suggests ansible jq ca-certificates gnupg software-properties-common tzdata git tar zip unzip s3fs ssh sshpass sshfs samba-client swaks nano wget curl rsync expect iputils-ping python3-pip && apt clean && apt -y autoremove && rm -rf /var/lib/{apt,dpkg,cache,log} && rm -rf /var/cache/* && rm -rf /var/log/apt/* && rm -rf /tmp/*
 # awscli install
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-$(uname -m).zip" -o "/root/awscliv2.zip" && unzip /root/awscliv2.zip -d /root && /root/aws/install && rm -f /root/awscliv2.zip && rm -rf /root/aws
 # terraform repo
