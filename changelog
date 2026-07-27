@@ -1,0 +1,97 @@
+* commit 0a497212f45c455ca7bbabfc2f505be00415d379 (HEAD -> main, origin/main, origin/HEAD)
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Mon Jul 27 16:39:42 2026 -0400
+| 
+|     * limpieza de docker
+| 
+* commit f44394f9a62a8f8fa31e4a4c030084ee133cade0
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Mon Jul 27 15:53:01 2026 -0400
+| 
+|     Update README to specify Ubuntu image
+| 
+* commit 51350000565db9f17146de9d22ff79bc1952f0bb
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Mon Jul 27 15:26:23 2026 -0400
+| 
+|     Update HashiCorp GPG key retrieval method
+| 
+* commit 8fa3c7449f416b5a84696ca42c6eff44c69eb944
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Mon Jul 27 15:20:22 2026 -0400
+| 
+|     Add Ansible to the list of tools in README
+| 
+* commit bfa0e0e17e0adb78bcfdd00cf73045af9c0c31dc
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Mon Jul 27 15:18:39 2026 -0400
+| 
+|     Add ansible to the list of tools in README
+| 
+* commit 9d1f03f14fa424460ac076e01c0058fec1d0b32c
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Mon Jul 27 15:11:15 2026 -0400
+| 
+|     Add python3-pip to Dockerfile dependencies
+| 
+* commit 7e2838ce79beb9193fde4c6eaea22482a5a3a384
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Mon Jul 27 15:08:53 2026 -0400
+| 
+|     Update Dockerfile to install additional packages
+| 
+* commit 579b4e612bcf4b05edc8764328a3448aebbc6398
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Mon Jul 27 14:14:03 2026 -0400
+| 
+|     Update README.md
+| 
+* commit 40254466982bea0e50d8d84d9d7323004ed748cc
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Mon Jul 27 13:42:19 2026 -0400
+| 
+|     Remove arm/v7 platform from Docker build command
+| 
+* commit 5e578e1d2b70f0fd9ba3924482bba34222b3a5ff
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Mon Jul 27 13:21:47 2026 -0400
+| 
+|     Add build script for Docker container setup
+| 
+* commit 41bb8b3246b6d19b80b124f2b6a701402770b6a3
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Mon Jul 27 11:06:53 2026 -0400
+| 
+|     Update README.md
+| 
+* commit 15c91af48a90efe359a7ee04ed86076a9810ec77
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Mon Jul 27 10:56:58 2026 -0400
+| 
+|     Add Jesús Palencia to AUTHORS file
+| 
+* commit 65f2c54b8b0dc298728db637dad58e05927077e8
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Mon Jul 27 10:53:17 2026 -0400
+| 
+|     Update README with installed packages list
+|     
+|     Added a list of installed packages to the README.
+| 
+* commit 8fb3be5bff689342725a442671278cffbd4a7746
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Mon Jul 27 10:47:25 2026 -0400
+| 
+|     Refactor Dockerfile to install Terraform and gcloud
+| 
+* commit 6cda1be5e834a7b140c3f29ce1899775be355d1a
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Mon Jul 27 10:35:54 2026 -0400
+| 
+|     Create Dockerfile
+| 
+* commit 8a46eb476eb3b4647a5ddeb086a7b3862bfdadb3
+  Author: Sinfallas <sinfallas@yahoo.com>
+  Date:   Mon Jul 27 09:22:54 2026 -0400
+  
+      Initial commit
