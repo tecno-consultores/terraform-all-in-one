@@ -27,6 +27,7 @@ List of installed packages:
 * terraform
 * google-cloud-cli
 * semaphoreui
+* ansible
 
 Get this image on:
 * https://hub.docker.com/r/sinfallas/terraform-all-in-one
