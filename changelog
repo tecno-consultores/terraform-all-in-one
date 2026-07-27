@@ -1,4 +1,16 @@
-* commit 0a497212f45c455ca7bbabfc2f505be00415d379 (HEAD -> main, origin/main, origin/HEAD)
+* commit 1527623067bd11b5a1ae5b89c52e723f4923c978 (HEAD -> main, origin/main, origin/HEAD)
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Mon Jul 27 17:39:13 2026 -0400
+| 
+|     * configuracion de aws mediante variables
+| 
+* commit 9c48f7ee9cac8ded27a8b6e8f1ae59253ae4ca6a
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Mon Jul 27 16:39:51 2026 -0400
+| 
+|     * changelog
+| 
+* commit 0a497212f45c455ca7bbabfc2f505be00415d379
 | Author: Jesus Palencia <sinfallas@gmail.com>
 | Date:   Mon Jul 27 16:39:42 2026 -0400
 | 
