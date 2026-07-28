@@ -13,6 +13,7 @@ services:
       - AWS_DEFAULT_REGION=example # change me
     volumes:
       - ./config.json:/etc/semaphore/config.json
+      - ./semaphore_data:/app
     logging:
       driver: "json-file"
       options:

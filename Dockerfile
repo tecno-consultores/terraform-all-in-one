@@ -13,11 +13,13 @@ RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | gpg --dearmor -
 # terraform and gcloud install
 RUN apt update -qq && apt -y install --no-install-recommends --no-install-suggests google-cloud-cli terraform && touch ~/.bashrc && terraform -install-autocomplete && apt clean && apt -y autoremove && rm -rf /var/lib/{apt,dpkg,cache,log} && rm -rf /var/cache/* && rm -rf /var/log/apt/* && rm -rf /tmp/*
 # semaphore install
-RUN ARCH=$(dpkg --print-architecture) && LATEST_VERSION=$(curl -s https://api.github.com/repos/semaphoreui/semaphore/releases/latest | jq -r .tag_name | sed 's/^v//') && wget -P /tmp "https://github.com/semaphoreui/semaphore/releases/download/v${LATEST_VERSION}/semaphore_${LATEST_VERSION}_linux_${ARCH}.deb" && apt -y install "/tmp/semaphore_${LATEST_VERSION}_linux_${ARCH}.deb" && rm -f "/tmp/semaphore_${LATEST_VERSION}_linux_${ARCH}.deb" && apt clean && apt -y autoremove && rm -rf /var/lib/{apt,dpkg,cache,log} && rm -rf /var/cache/* && rm -rf /var/log/apt/* && rm -rf /tmp/*
+RUN ARCH=$(dpkg --print-architecture) && LATEST_VERSION=$(curl -s https://api.github.com/repos/semaphoreui/semaphore/releases/latest | jq -r .tag_name | sed 's/^v//') && wget --tries=20 --waitretry=5 --read-timeout=45 -P /tmp "https://github.com/semaphoreui/semaphore/releases/download/v${LATEST_VERSION}/semaphore_${LATEST_VERSION}_linux_${ARCH}.deb" && apt -y install "/tmp/semaphore_${LATEST_VERSION}_linux_${ARCH}.deb" && rm -f "/tmp/semaphore_${LATEST_VERSION}_linux_${ARCH}.deb" && apt clean && apt -y autoremove && rm -rf /var/lib/{apt,dpkg,cache,log} && rm -rf /var/cache/* && rm -rf /var/log/apt/* && rm -rf /tmp/*
 # misc
 COPY configuraraws /usr/bin/configuraraws
-RUN chmod 777 /usr/bin/configuraraws
+RUN chmod +x /usr/bin/configuraraws
 RUN mkdir -p /etc/semaphore
 COPY config.json /etc/semaphore/config.json
+COPY entrypoint.sh /usr/bin/entrypoint.sh
+RUN chmod +x /usr/bin/entrypoint.sh 
 EXPOSE 3000
-ENTRYPOINT ["semaphore", "server", "--config", "/etc/semaphore/config.json"]
+ENTRYPOINT ["/usr/bin/entrypoint.sh"]

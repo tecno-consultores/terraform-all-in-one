@@ -1,4 +1,3 @@
-cat << EOF > ./config.json
 {
   "sqlite": {
     "host": "./database.sqlite"
@@ -7,21 +6,8 @@ cat << EOF > ./config.json
   "schedule": {
     "timezone": "America/Caracas"
   },
-  "max_parallel_tasks": "10",
+  "max_parallel_tasks": 10,
   "cookie_hash": "Qs3EigPE5UBf9GgzsXDIOtStEdCdiuHfnpQ7uIrvFgc=",
   "cookie_encryption": "kyg6AjFUqWax6oUADM9wyH3HE4Jj96uAI5mJ75j+wT4=",
   "access_key_encryption": "Sej98VLQYfOcd5iE0ESiWJVMQO8ZXgr/yUkgm0O6X3Q="
 }
-EOF
-
-
-semaphore user add --admin \
-  --login admin \
-  --password 0n0qNwFTHSMdd6i2m0xxukAuuVluppKD \
-  --name "admin" \
-  --email "admin@localhost" \
-  --config ./config.json
-
-
-semaphore server --config ./config.json
-
