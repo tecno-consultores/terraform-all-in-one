@@ -10,7 +10,7 @@ fi
 clear
 docker buildx rm container-builder
 docker buildx create --name container-builder --driver docker-container --bootstrap --use
-docker buildx build --builder=container-builder --platform linux/arm64,linux/amd64 --cache-to type=registry,ref=sinfallas/terraform-all-in-one:buildcache,mode=max --cache-from type=registry,ref=sinfallas/terraform-all-in-one:buildcache --push -t sinfallas/terraform-all-in-one:latest -f Dockerfile .
+docker buildx build --builder=container-builder --platform linux/arm64,linux/amd64 --cache-to type=local,dest=./.buildx-cache,mode=max --cache-from type=local,src=./.buildx-cache --push -t sinfallas/terraform-all-in-one:latest -f Dockerfile .
 #docker buildx rm container-builder
 #docker system prune -af
 #docker builder prune -af
