@@ -26,5 +26,6 @@ RUN mkdir -p /etc/semaphore
 COPY config.json /etc/semaphore/config.json
 COPY entrypoint.sh /usr/bin/entrypoint.sh
 RUN chmod +x /usr/bin/entrypoint.sh
+HEALTHCHECK --interval=30s --timeout=10s --start-period=15s --retries=3 CMD curl --silent --fail http://localhost:3000/api/ping || exit 1
 EXPOSE 3000
 ENTRYPOINT ["/usr/bin/entrypoint.sh"]
