@@ -6,7 +6,11 @@ Ubuntu image with Terraform, awscli, google-cloud-cli, semaphoreUI, ansible and 
 
 
 Default USER: admin
+
+
 Default PASSWORD: 0n0qNwFTHSMdd6i2m0xxukAuuVluppKD
+
+
 URL: http://127.0.0.1:3000
 
 List of installed packages:
