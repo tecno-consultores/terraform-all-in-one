@@ -1,3 +1,10 @@
+networks:
+  terraform:
+    enable_ipv6: true
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: 1
+
 services:
   terraform:
     image: sinfallas/terraform-all-in-one:latest
@@ -19,4 +26,5 @@ services:
       options:
         max-size: "1m"
         max-file: "1"
-
+    networks:
+      - terraform
