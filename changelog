@@ -1,4 +1,52 @@
-* commit 92e6b94d7bd5854e9e7b8d2980d816ac0069071f (HEAD -> main, origin/main, origin/HEAD)
+* commit 77a5e3033773e83c2fcdecd15f8ca8923c21ac8c (HEAD -> main, origin/main, origin/HEAD)
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Thu Jul 30 18:22:35 2026 -0400
+| 
+|     * variables
+| 
+* commit 06202a6b5e1ec034dc8ce0c2814bf2cfd52dc8bc
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Thu Jul 30 15:47:26 2026 -0400
+| 
+|     Update docker-compose.yml
+| 
+* commit 32c037b915310b7d0383fe29cc01cc93a0587351
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Thu Jul 30 15:44:51 2026 -0400
+| 
+|     Update configuraraws
+| 
+* commit bcd3f845aad07cb405f7867a9c76cf1831adb632
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Thu Jul 30 14:57:57 2026 -0400
+| 
+|     Update Dockerfile
+| 
+* commit 320cb979dffd91af56e9b8d6e299298137a0bf94
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Thu Jul 30 14:48:42 2026 -0400
+| 
+|     Update AWS CLI configuration commands
+| 
+* commit 94642f0c19056869f612ab5c9215543925e6e15e
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Thu Jul 30 14:45:11 2026 -0400
+| 
+|     Update configuraraws
+| 
+* commit 15079fd431f9029fec707b0a35d280952d6fee80
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Thu Jul 30 14:44:56 2026 -0400
+| 
+|     Update Dockerfile
+| 
+* commit 124cb191f1622030cb3960e01555ab25cd444310
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Tue Jul 28 16:52:14 2026 -0400
+| 
+|     * changelog
+| 
+* commit 92e6b94d7bd5854e9e7b8d2980d816ac0069071f
 | Author: Jesus Palencia <sinfallas@gmail.com>
 | Date:   Tue Jul 28 16:52:04 2026 -0400
 | 
