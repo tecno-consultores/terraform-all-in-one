@@ -14,14 +14,13 @@ RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | gpg --dearmor -
 RUN apt update && apt -y install --no-install-recommends --no-install-suggests google-cloud-cli terraform && touch ~/.bashrc && terraform -install-autocomplete && apt clean && apt -y autoremove && rm -rf /var/lib/{apt,dpkg,cache,log} && rm -rf /var/cache/* && rm -rf /var/log/apt/* && rm -rf /tmp/*
 # terraform plugin cache aws provider
 RUN mkdir -p /usr/local/share/terraform/plugins /tmp/tf-init ~/.terraform.d
-
 RUN echo 'provider_installation { \n\
   filesystem_mirror { \n\
     path    = "/usr/local/share/terraform/plugins" \n\
     include = ["registry.terraform.io/*/*"] \n\
   } \n\
   direct { \n\
-    exclude = ["registry.terraform.io/*/*"] \n\
+    exclude = ["registry.terraform.io/hashicorp/aws"] \n\
   } \n\
 }' > ~/.terraformrc
 COPY init-aws.tf /tmp/tf-init/main.tf
