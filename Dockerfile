@@ -13,10 +13,19 @@ RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | gpg --dearmor -
 # terraform and gcloud install
 RUN apt update && apt -y install --no-install-recommends --no-install-suggests google-cloud-cli terraform && touch ~/.bashrc && terraform -install-autocomplete && apt clean && apt -y autoremove && rm -rf /var/lib/{apt,dpkg,cache,log} && rm -rf /var/cache/* && rm -rf /var/log/apt/* && rm -rf /tmp/*
 # terraform plugin cache aws provider
-ENV TF_PLUGIN_CACHE_DIR="/usr/local/share/terraform/plugin-cache"
-RUN mkdir -p ${TF_PLUGIN_CACHE_DIR} /tmp/tf-init
+RUN mkdir -p /usr/local/share/terraform/plugins /tmp/tf-init ~/.terraform.d
+
+RUN echo 'provider_installation { \n\
+  filesystem_mirror { \n\
+    path    = "/usr/local/share/terraform/plugins" \n\
+    include = ["registry.terraform.io/*/*"] \n\
+  } \n\
+  direct { \n\
+    exclude = ["registry.terraform.io/*/*"] \n\
+  } \n\
+}' > ~/.terraformrc
 COPY init-aws.tf /tmp/tf-init/main.tf
-RUN cd /tmp/tf-init && terraform init && cd /app && rm -rf /tmp/tf-init
+RUN cd /tmp/tf-init && terraform providers mirror /usr/local/share/terraform/plugins && cd /app && rm -rf /tmp/tf-init
 # semaphore install
 RUN ARCH=$(dpkg --print-architecture) && LATEST_VERSION=$(curl -s https://api.github.com/repos/semaphoreui/semaphore/releases/latest | jq -r .tag_name | sed 's/^v//') && wget --tries=20 --waitretry=5 --read-timeout=45 -P /tmp "https://github.com/semaphoreui/semaphore/releases/download/v${LATEST_VERSION}/semaphore_${LATEST_VERSION}_linux_${ARCH}.deb" && apt -y install "/tmp/semaphore_${LATEST_VERSION}_linux_${ARCH}.deb" && rm -f "/tmp/semaphore_${LATEST_VERSION}_linux_${ARCH}.deb" && apt clean && apt -y autoremove && rm -rf /var/lib/{apt,dpkg,cache,log} && rm -rf /var/cache/* && rm -rf /var/log/apt/* && rm -rf /tmp/*
 # misc
