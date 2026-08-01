@@ -5,13 +5,13 @@ Made by: [Tecno Consultores 2023](https://www.tecnoconsultores.net/)
 Ubuntu image with Terraform, awscli, google-cloud-cli, semaphoreUI, ansible and other complementary tools.
 
 
-Default USER: **admin**
+Semaphore default USER: **admin**
 
 
-Default PASSWORD: **0n0qNwFTHSMdd6i2m0xxukAuuVluppKD**
+Semaphore default PASSWORD: **0n0qNwFTHSMdd6i2m0xxukAuuVluppKD**
 
 
-URL: **http://127.0.0.1:3000**
+Semaphore URL: **http://127.0.0.1:3000**
 
 
 List of installed packages:
