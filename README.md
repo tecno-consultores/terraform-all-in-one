@@ -65,3 +65,6 @@ To save time and bandwidth, the container is pre-configured with the AWS provide
 * **Maintainer:** Jesús Palencia (sinfallas@gmail.com)
 * **License:** GPL-2
 * **Docker Hub:** [sinfallas/terraform-all-in-one](https://hub.docker.com/r/sinfallas/terraform-all-in-one)
+
+
+Copyright (C) 2026 Jesus Palencia <sinfallas@gmail.com> (Creado en Tecno Consultores)

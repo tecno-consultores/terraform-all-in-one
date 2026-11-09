@@ -1,5 +1,5 @@
 FROM ubuntu:26.04
-LABEL org.opencontainers.image.authors="sinfallas@gmail.com"
+LABEL org.opencontainers.image.authors="Jesus Palencia <sinfallas@gmail.com> (Creado en Tecno Consultores)"
 ENV DEBIAN_FRONTEND=noninteractive
 WORKDIR /app
 RUN apt update && apt -y dist-upgrade && apt -y install --no-install-recommends --no-install-suggests less groff ansible jq ca-certificates gnupg software-properties-common tzdata git tar zip unzip s3fs ssh sshpass sshfs samba-client swaks nano wget curl rsync expect iputils-ping python3-pip && apt clean && apt -y autoremove && rm -rf /var/lib/{apt,dpkg,cache,log} && rm -rf /var/cache/* && rm -rf /var/log/apt/* && rm -rf /tmp/*
